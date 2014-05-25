@@ -1,0 +1,16 @@
+PackratFormat: 1.1
+PackratVersion: 0.1.0.99
+RVersion: 3.0.2
+Repos: http://cran.rstudio.com,
+  http://bioconductor.org/packages/2.13/bioc,
+  http://bioconductor.org/packages/2.13/data/annotation,
+  http://bioconductor.org/packages/2.13/data/experiment,
+  http://bioconductor.org/packages/2.13/extra
+
+Package: packrat
+Source: github
+Version: 0.1.0.99
+GithubRepo: packrat
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: 8f967460ef05d4e8d6727bc32a36984c9f08ec37

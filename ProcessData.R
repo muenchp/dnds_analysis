@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# autor
+>>>>>>> 79c713afd62f09ba7294774892c0778500191683
 
 globalDnDs <- function(path_to_folder_with_dnds_files, path_to_folder_with_gap_files){
   ### get number of synonymous and non-synonymous mutations for a whole sample ###
@@ -9,6 +13,12 @@ globalDnDs <- function(path_to_folder_with_dnds_files, path_to_folder_with_gap_f
   
   tigr_list <- list.files(path_to_folder_with_dnds_files) # list of all input files 
   dnds_sample_all <- NULL; i <- 0; dNall <- 0; dSall <- 0 # assign variables
+<<<<<<< HEAD
+=======
+  addsmallnumber <- 0.5 # small number to prevent division by zero
+  window_size <- 10 
+  gapthres <- 0.6
+>>>>>>> 79c713afd62f09ba7294774892c0778500191683
   for (file in tigr_list) {
     # iterate over all families in input folder
     i <- i + 1
@@ -36,9 +46,23 @@ globalDnDs <- function(path_to_folder_with_dnds_files, path_to_folder_with_gap_f
     takethis_sample <- which(gap_win < gapthres)
     dnds_sample <- dnds_win[takethis_sample]
     dnds_sample_all <- c(dnds_sample_all,dnds_sample) 
+<<<<<<< HEAD
     return_list <- list("N" = dNall, "S" = dSall, "dnds_window" = dnds_sample_all)
   } # for
   return(return_list)
 } # function
 
 
+=======
+  } # for
+  return(list(dNall, dSall, dnds_sample_all))
+} # function
+
+
+#### create sequence plot for a specific familiy ####
+createSequencePlot <- function(tigr) {
+
+  
+  return(result)
+}
+>>>>>>> 79c713afd62f09ba7294774892c0778500191683
